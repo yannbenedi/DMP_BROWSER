@@ -10,14 +10,7 @@ import re
 import sys
 import os
 from pathlib import Path
-from icecream import ic
 import resources  # Import the compiled resource file for icon
-
-"""
-clean, remove try catch and ic
-indicate where to change for new project
-export requirments.txt
-"""
 
 
 class UI(QMainWindow):
@@ -289,9 +282,7 @@ class UI(QMainWindow):
         seq should be 3 / scene should be 3 / shot should be 4
         """
 
-        ic("START SPLIT USER NAME")
         self.seq, self.scene, self.shot = str(self.user_shot_type.text()).split()
-        ic(self.seq, self.scene, self.shot)
 
         # add zeros needed to fill the pattern match "000 000 0000"
         self.seq = f"{int(self.seq):03d}"
@@ -299,8 +290,6 @@ class UI(QMainWindow):
         self.shot = f"{int(self.shot):04d}"
 
         shot_user_corrected = " ".join((self.seq, self.scene, self.shot))
-        ic(self.seq, self.scene, self.shot)
-        ic(shot_user_corrected)
 
         # check "000 000 0000" pattern
         pattern_project = re.compile("^[0-9]{3}\s[0-9]{3}\s[0-9]{4}$")
