@@ -1,17 +1,3 @@
-<html>
-<head>
-<style>
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-}
-</style>
-</head>
 
 # Features
 - Browse through directory tree
@@ -29,9 +15,9 @@ You can directly type the desired shot.
 If the shot doesn't exist, it'll create the shot using predifined folder structure.
 Click on file for image preview, or double click to open.
 
-<img src="data/open_list.gif" width="600" class="center">
+<img src="data/open_list.gif" width="600" >
 
-<img src="data/open_type.gif" width="600" class="center">
+<img src="data/open_type.gif" width="600" >
 
 
 # Custom directories 
@@ -39,7 +25,7 @@ Link to favorite folders.
 
 You can add your own folder in the Custom list by amending this dictionary.
 
-<img src="data/Custom_dir.JPG" width="250" class="center">
+<img src="data/Custom_dir.JPG" width="250" >
 
 <!-- Code -->
 ```python 
