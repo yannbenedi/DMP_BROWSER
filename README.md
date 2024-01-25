@@ -1,3 +1,5 @@
+<html>
+<head>
 <style>
 .center {
   display: block;
@@ -8,8 +10,8 @@
   padding-bottom: 30px;
   padding-left: 30px;
 }
-
 </style>
+</head>
 
 # Features
 - Browse through directory tree
@@ -23,11 +25,13 @@
 # Quick start
 ## Browse folders
 You can browse manually in the directory tree.
-<img src="data/open_list.gif" width="600" class="center">
 You can directly type the desired shot.
 If the shot doesn't exist, it'll create the shot using predifined folder structure.
-<img src="data/open_type.gif" width="600" class="center">
 Click on file for image preview, or double click to open.
+
+<img src="data/open_list.gif" width="600" class="center">
+
+<img src="data/open_type.gif" width="600" class="center">
 
 
 # Custom directories 
@@ -45,7 +49,6 @@ self.dir_special = {
     "Textures": Path(r"C:\_YannB\_WORK\11_UNTOLD\_TRANSFER"),
 }
 ```
-<br/>
 
 
 Edit your template for new shot.
@@ -63,8 +66,6 @@ Edit your template for new shot.
         self.shot_dir.joinpath("PSD").mkdir(parents=True, exist_ok=True)
         self.shot_dir.joinpath("REF").mkdir(parents=True, exist_ok=True)
 ```
-<br/>
-
 
 # Installation
 
