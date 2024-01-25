@@ -1,36 +1,63 @@
 
+# Quick start
+
+<table>
+<tr>
+<td>
+
+The tool is designed to spend less time when browsing through nested folder structure and quickly preview the pictures of a shot.
+
+</td>
+</tr>
+</table>
+
 # Features
 - Browse through directory tree
-- Type a shot to access directly
-- Type a new shot. It'll create it using predifined folder structure
+- Type a shot to access it directly
+- When typing a new shot, it'll create it using predefined folder structure
 - Preview 3D folder content and PSD folder. CLick to preview picture
-- PSD preview create jpg from each PSD / PSB
+- PSD preview create JPG from each PSD / PSB
 - Double click to open 3D file or PSD file
-- Buttons for favorite folders.
+- List of favorite folders.
 
 
+<p style="text-align:center;"><img src="data/GUI.JPG" width="600" ></p>
 
-<img src="data/GUI.JPG" width="600" >
+
+## Folder structure
+Here is the current folder structure:
+
+* Seq
+    - Scene
+      - Shot
+        - 3D
+        - PSD
+        - REF
 
 
-# Quick start
 ## Browse folders
-You can browse manually in the directory tree.
-You can directly type the desired shot.
+You can browse in the directory tree or you can directly type the desired shot.
+
 If the shot doesn't exist, it'll create the shot using predifined folder structure.
 Click on file for image preview, or double click to open.
+<p style="text-align:center;"><img src="data/open_list.gif" width="600" ></p>
 
-<img src="data/open_list.gif" width="600" >
+When typing the shot, you need to respect the format:
+"seq scene shot" each separated by a space.
+No need to type the zero as it'll autofill to fit the format.
 
-<img src="data/open_type.gif" width="600" >
+<p style="text-align:center;">Seq: 3 digits / Scene: 3 digits / Shot: 4 digits</p>
+<p style="text-align:center;">"--- --- ----"</p>
+
+<p style="text-align:center;"><img src="data/open_type.gif" width="600" ></p>
 
 
 # Custom directories 
 Link to favorite folders.
 
 You can add your own folder in the Custom list by amending this dictionary.
+<p style="text-align:center;"><img src="data/Custom_dir.JPG" width="250" ></p>
 
-<img src="data/Custom_dir.JPG" width="250" >
 
 <!-- Code -->
 ```python 
@@ -41,6 +68,7 @@ self.dir_special = {
 }
 ```
 
+# Template structure
 
 Edit your template for new shot.
 <!-- Code -->
@@ -57,6 +85,16 @@ Edit your template for new shot.
         self.shot_dir.joinpath("PSD").mkdir(parents=True, exist_ok=True)
         self.shot_dir.joinpath("REF").mkdir(parents=True, exist_ok=True)
 ```
+
+Here is the current template structure:
+
+* 3D
+    - assets
+    - data
+    - imagePlane
+    - scenes
+    - textures    
+
 
 # Installation
 
