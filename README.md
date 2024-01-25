@@ -8,6 +8,11 @@
 - Double click to open 3D file or PSD file
 - Buttons for favorite folders.
 
+
+
+<img src="data/GUI.JPG" width="600" >
+
+
 # Quick start
 ## Browse folders
 You can browse manually in the directory tree.
