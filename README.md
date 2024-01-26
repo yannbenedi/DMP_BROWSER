@@ -35,6 +35,14 @@ Here is the current folder structure:
         - REF
 
 
+Adjust the root project path.
+<!-- Code -->
+```python 
+# CUSTOM DIRECTORY
+ROOT_PATH = Path(r"C:\TMP_local\Project")
+```
+
+
 ## Browse folders
 You can browse in the directory tree or you can directly type the desired shot.
 
